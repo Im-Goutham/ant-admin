@@ -65,7 +65,10 @@ switch(path) {
           collapsed={this.state.collapsed}
           style={{height:'100vh'}}
         >
-          <div className="logo" />
+          <div className="logo" >
+             <a href="/"><img src='images/logo.jpg' style={{width: '100%',
+    height: '100%'}}/></a>
+          </div>
           <Menu theme="dark" defaultSelectedKeys={[menuKey]} mode="inline">
             <Menu.Item key="1" onClick={()=>{this.props.history.push('dashboard')}}>
               <Icon type="home" />

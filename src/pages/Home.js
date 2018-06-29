@@ -6,9 +6,13 @@ import { connect } from 'react-redux';
 
 import * as actions from '../actions';
 
-import Login from './Login';
-import Register from './Register';
-import Forget from './Forget';
+// import Login from './Login';
+// import Register from './Register';
+// import Forget from './Forget';
+
+import Header from '../components/Header';
+import TopHeader from '../components/TopHeader';
+import Footer from '../components/Footer';
 
 const baseurl = "http://10.2.1.49:5037/api"
 
@@ -33,66 +37,9 @@ changeForm(formType) {
     return (
       <div id="page">
     {/*-header top--*/}
-    <div className="top-header">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            {/*                            <a href="#"> </a>
-                                                    <div class="info-block"><i class="fa fa-map"></i>701 Old York Drive Richmond USA.</div>*/}
-          </div>
-          <div className="col-md-6">
-            <div className="social-grid">
-              <ul className="list-unstyled text-right">
-                <li><a><i className="fa fa-facebook" /></a></li>
-                <li><a><i className="fa fa-twitter" /></a></li>
-                <li><a><i className="fa fa-linkedin" /></a></li>
-                <li><a><i className="fa fa-instagram" /></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <TopHeader/>
     {/*header-*/}
-    <header className="header-container">
-      <div className="container">
-        <div className="top-row">
-          <div className="row">
-            <div className="col-md-2 col-sm-6 col-xs-6">
-              <div id="logo">
-                {/*<a href="index.html"><img src="images/logo.png" alt="logo"></a>*/}
-                <a href="/"><img src='images/logo.jpg' style={{width: 100}}/></a>
-              </div>
-            </div>
-            <div className="col-sm-6 visible-sm">
-              <div className="text-right"><button type="button" className="book-now-btn">Login</button></div>
-            </div>
-            <div className="col-md-8 col-sm-12 col-xs-12 remove-padd">
-              <nav className="navbar navbar-default">
-                <div className="navbar-header page-scroll">
-                  <button data-target=".navbar-ex1-collapse" data-toggle="collapse" className="navbar-toggle" type="button">
-                    <span className="sr-only">Toggle navigation</span>
-                    <span className="icon-bar" />
-                    <span className="icon-bar" />
-                    <span className="icon-bar" />
-                  </button>
-                </div>
-                <div className="collapse navigation navbar-collapse navbar-ex1-collapse remove-space">
-                  <ul className="list-unstyled nav1 cl-effect-10">
-                    <li><a data-hover="Home" className="active"><span>Home</span></a></li>
-                    <li><a data-hover="About" href="about.html"><span>About</span></a></li>
-                    <li><a data-hover="Contact Us" href="contact.html"><span>contact Us</span></a></li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-            <div className="col-md-2  col-sm-4 col-xs-12 hidden-sm">
-              <div className="text-right"><button type="button" className="book-now-btn">Login</button></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <Header/>
     {/*end*/}
     <div id="myCarousel1" className="carousel slide" data-ride="carousel">
       {/* Indicators */}
@@ -405,13 +352,7 @@ changeForm(formType) {
       </div>
     </section>
     {/*-footer-*/}
-    <footer>
-      <div className="container">
-        <div className="copyright">
-          © 2018 All right reserved.
-        </div>
-      </div>
-    </footer>
+  <Footer/>
     {/*back to top-*/}
     <a style={{display: 'none'}} href="javascript:void(0);" className="scrollTop back-to-top" id="back-to-top">
       <span><i aria-hidden="true" className="fa fa-angle-up fa-lg" /></span>

@@ -912,3 +912,48 @@ footer a{
 #instafeed > div:nth-last-child(-n+3) {
     margin-top: 15px;
 }
+
+.ant-menu-item-selected {
+    background-color: #2083B4 !important;
+}
+
+.ant-menu-item-selected {
+    background-color: #2083B4  !important;
+}
+
+.ant-btn-primary:active, .ant-btn-primary.active {
+    color: #fff;
+    background-color: #2083B4  !important;
+    border-color: #2083B4  !important;
+}
+
+.ant-input {
+    height: 45px !important;
+
+}
+
+.ant-btn-primary {
+    color: #fff !important;
+    background-color: #2083B4 !important;
+    border-color: #2083B4 !important;
+    height: 45px !important;
+}
+
+.slick-slide {
+    background: #2083B4 !important;
+  }
+
+.steps-content {
+    padding-top: 40px !important;
+}
+
+.ant-modal-title {
+    font-weight: 1000 !important;
+    color: #2083B4 !important;
+    font-size: 25px !important;
+}
+
+.linkText {
+  font-weight: 1000 !important;
+  color: #2083B4 !important;
+}
