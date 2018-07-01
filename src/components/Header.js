@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
-import { Modal, Button } from 'antd';
+import { Modal, Button,Input } from 'antd';
 
 import Login from './Login';
 import Register from './Register';
 import Forget from './Forget';
+
+const Search = Input.Search;
+
+
 
 class Header extends Component {
 
@@ -64,27 +68,13 @@ class Header extends Component {
                   <a href="/"><img src='images/logo.jpg' style={{width: 100}}/></a>
                 </div>
               </div>
-              <div className="col-sm-6 visible-sm">
-                <div className="text-right"><button type="button" className="book-now-btn">Login</button></div>
-              </div>
               <div className="col-md-8 col-sm-12 col-xs-12 remove-padd">
-                <nav className="navbar navbar-default">
-                  <div className="navbar-header page-scroll">
-                    <button data-target=".navbar-ex1-collapse" data-toggle="collapse" className="navbar-toggle" type="button">
-                      <span className="sr-only">Toggle navigation</span>
-                      <span className="icon-bar" />
-                      <span className="icon-bar" />
-                      <span className="icon-bar" />
-                    </button>
-                  </div>
-                  <div className="collapse navigation navbar-collapse navbar-ex1-collapse remove-space">
-                    <ul className="list-unstyled nav1 cl-effect-10">
-                      <li onClick={()=>this.props.history.push('/')}><a data-hover="Home" className={pathname=='/'?'active':''}><span>Home</span></a></li>
-                      <li onClick={()=>this.props.history.push('/about')}><a data-hover="About" className={pathname=='/about'?'active':''}><span>About</span></a></li>
-                      <li onClick={()=>this.props.history.push('/contact')}><a data-hover="Contact Us" className={pathname=='/contact'?'active':''}><span>contact Us</span></a></li>
-                    </ul>
-                  </div>
-                </nav>
+              <Search
+                  placeholder="Search products and brands"
+                  enterButton="Search"
+                  size="large"
+                  onSearch={value => console.log(value)}
+                />
               </div>
               <div className="col-md-2  col-sm-4 col-xs-12 hidden-sm">
                 <div className="text-right"><button type="button"  onClick={this.showModal} className="book-now-btn">Login</button></div>

@@ -147,8 +147,18 @@ ul{
     display: inline;
 }
 .top-row{
-    padding: 35px 0;
+    padding: 10px 0;
 }
+.header-container {
+  background: #2083B4;
+}
+
+.ant-input-search > .ant-input-suffix > .ant-input-search-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #333 !important;
+}
+
 #logo > a {
     color: #2083B4;
     font-size: 32px;
@@ -956,4 +966,15 @@ footer a{
 .linkText {
   font-weight: 1000 !important;
   color: #2083B4 !important;
+}
+
+
+.bg--gradient-orange-to-red {
+    background: #a5a6a7;
+    background-image: linear-gradient(274deg,#dd5e89,#f7bb97);
+}
+.caption__container {
+    padding: 1.6em 0;
+    text-align: center;
+    /* position: relative; */
 }
