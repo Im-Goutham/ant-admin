@@ -21,10 +21,16 @@ class Footer extends Component {
   render() {
 
     return (
-      <footer>
-        <div className="container">
-          <div className="copyright">
-            © 2018 All right reserved.
+      <footer id="colorlib-footer" role="contentinfo" style={{background:'rgb(0, 122, 183)',color:'white',fontWeight:500}}>
+        <div className="copy">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <p>
+                <span className="block">
+                  Copyright © All rights reserved
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </footer>

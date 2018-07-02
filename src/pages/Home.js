@@ -18,6 +18,7 @@ import Header from '../components/Header';
 import TopHeader from '../components/TopHeader';
 import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
+import OurProducts from '../components/OurProducts'
 
 
 
@@ -50,49 +51,137 @@ changeForm(formType) {
     let { formType } = this.state;
     return (
       <div id="page">
-    {/*-header top--*/}
-    <TopHeader/>
-    {/*header-*/}
-    <Header/>
-    {/*end*/}
-    <div id="myCarousel1" className="carousel slide" data-ride="carousel">
-      {/* Indicators */}
-      <ol className="carousel-indicators">
-        <li data-target="#myCarousel1" data-slide-to={0} className="active" />
-        <li data-target="#myCarousel1" data-slide-to={1} />
-        <li data-target="#myCarousel1" data-slide-to={2} />
-      </ol>
-      <div className="carousel-inner">
-        <div className="item active"> <img src="images/banner.jpg" style={{width: '100%', height: 500}} alt="First slide" />
+      <Header/>
+       <aside id="colorlib-hero">
+         <div className="flexslider">
+           <ul className="slides">
+             <li style={{backgroundImage: 'url(images/img_bg_1.jpg)'}}>
+               <div className="overlay" />
+               <div className="container-fluid">
+                 <div className="row">
+                   <div className="col-md-6 col-md-offset-3 col-md-pull-2 col-sm-12 col-xs-12 slider-text">
+                     <div className="slider-text-inner">
+                       <div className="desc">
+                         <h1 className="head-1">Mens</h1>
+                         <h2 className="head-2">Jeans</h2>
+                         <h2 className="head-3">Collection</h2>
+                         <p className="category"><span>New stylish shirts, pants &amp; Accessories</span></p>
+                         <p><a href="#" className="btn btn-primary">Shop Collection</a></p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </li>
+             <li style={{backgroundImage: 'url(images/img_bg_2.jpg)'}}>
+               <div className="overlay" />
+               <div className="container-fluid">
+                 <div className="row">
+                   <div className="col-md-6 col-md-offset-3 col-md-pull-2 col-sm-12 col-xs-12 slider-text">
+                     <div className="slider-text-inner">
+                       <div className="desc">
+                         <h1 className="head-1">Huge</h1>
+                         <h2 className="head-2">Sale</h2>
+                         <h2 className="head-3">45% off</h2>
+                         <p className="category"><span>New stylish shirts, pants &amp; Accessories</span></p>
+                         <p><a href="#" className="btn btn-primary">Shop Collection</a></p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </li>
+             <li style={{backgroundImage: 'url(images/img_bg_3.jpg)'}}>
+               <div className="overlay" />
+               <div className="container-fluid">
+                 <div className="row">
+                   <div className="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 slider-text">
+                     <div className="slider-text-inner">
+                       <div className="desc">
+                         <h1 className="head-1">New</h1>
+                         <h2 className="head-2">Arrival</h2>
+                         <h2 className="head-3">up to 30% off</h2>
+                         <p className="category"><span>New stylish shirts, pants &amp; Accessories</span></p>
+                         <p><a href="#" className="btn btn-primary">Shop Collection</a></p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </li>
+           </ul>
+         </div>
+       </aside>
+       <div id="colorlib-featured-product">
+         <div className="container">
+           <div className="row">
+             <div className="col-md-6">
+               <a href="shop.html" className="f-product-1" style={{backgroundImage: 'url(images/item-1.jpg)'}}>
+                 <div className="desc">
+                   <h2>Fahion <br />for <br />men</h2>
+                 </div>
+               </a>
+             </div>
+             <div className="col-md-6">
+               <div className="row">
+                 <div className="col-md-6">
+                   <a href className="f-product-2" style={{backgroundImage: 'url(images/item-2.jpg)'}}>
+                     <div className="desc">
+                       <h2>New <br />Arrival <br />Dress</h2>
+                     </div>
+                   </a>
+                 </div>
+                 <div className="col-md-6">
+                   <a href className="f-product-2" style={{backgroundImage: 'url(images/item-4.jpg)'}}>
+                     <div className="desc">
+                       <h2>Sale <br />20% <br />off</h2>
+                     </div>
+                   </a>
+                 </div>
+                 <div className="col-md-12">
+                   <a href className="f-product-2" style={{backgroundImage: 'url(images/item-3.jpg)'}}>
+                     <div className="desc">
+                       <h2>Shoes <br />for <br />men</h2>
+                     </div>
+                   </a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
 
-        </div>
-        <div className="item"> <img src="images/banner2.jpg" style={{width: '100%', height: 500}} alt="Second slide" />
-
-        </div>
-        <div className="item"> <img src="images/banner3.jpg" style={{width: '100%', height: 500}} alt="Third slide" />
-
-        </div>
-      </div>
-      <a className="left carousel-control" href="#myCarousel1" data-slide="prev"> <img src="images/icons/left-arrow.png" onmouseover="this.src = 'images/icons/left-arrow-hover.png'" onmouseout="this.src = 'images/icons/left-arrow.png'" alt="left" /></a>
-      <a className="right carousel-control" href="#myCarousel1" data-slide="next"><img src="images/icons/right-arrow.png" onmouseover="this.src = 'images/icons/right-arrow-hover.png'" onmouseout="this.src = 'images/icons/right-arrow.png'" alt="left" /></a>
-    </div>
-    <div style={{margin:100}}>
-       <h1>Trending products</h1>
-    </div>
-    <Row>
-       <Col lg={{ span: 5, offset: 1 }}>  <ProductCard/></Col>
-       <Col lg={{ span: 5, offset: 1 }}>  <ProductCard/></Col>
-       <Col lg={{ span: 5, offset: 1 }}>  <ProductCard/></Col>
-       <Col lg={{ span: 5, offset: 1 }}>  <ProductCard/></Col>
-     </Row>
-    {/*-footer-*/}
-  <Footer/>
-    {/*back to top-*/}
-    <a style={{display: 'none'}} href="javascript:void(0);" className="scrollTop back-to-top" id="back-to-top">
-      <span><i aria-hidden="true" className="fa fa-angle-up fa-lg" /></span>
-      <span>Top</span>
-    </a>
-  </div>
+       <div id="colorlib-intro" className="colorlib-intro" style={{backgroundImage: 'url(images/cover-img-1.jpg)'}} data-stellar-background-ratio="0.5">
+         <div className="overlay" />
+         <div className="container">
+           <div className="row">
+             <div className="col-md-6">
+               <div className="intro-desc">
+                 <div className="text-salebox">
+                   <div className="text-lefts">
+                     <div className="sale-box">
+                       <div className="sale-box-top">
+                         <h2 className="number">45</h2>
+                         <span className="sup-1">%</span>
+                         <span className="sup-2">Off</span>
+                       </div>
+                       <h2 className="text-sale">Sale</h2>
+                     </div>
+                   </div>
+                   <div className="text-rights">
+                     <h3 className="title">Just hurry up limited offer!</h3>
+                     <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                     <p><a href="shop.html" className="btn btn-primary">Shop Now</a> <a href="#" className="btn btn-primary btn-outline">Read more</a></p>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      <OurProducts />
+      <Footer/>
+     </div>
     );
   }
 }

@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
-import { Layout, Menu, Breadcrumb, Icon, Carousel, Button } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon, Carousel, Button,Input,Row, Col  } from 'antd';
 import TableComponent from '../components/TableComponent';
-const { Header, Content, Footer, Sider } = Layout;
+import OurProducts from '../components/OurProducts';
+import Footer from '../components/Footer';
+const { Header, Content, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
+const Search = Input.Search;
 
 
 
 class Dashboard extends React.Component {
   state = {
-    collapsed: false,
+    collapsed: true,
   };
   toggle = () => {
     this.setState({
@@ -58,6 +61,7 @@ switch(path) {
 }
 
     return (
+      <div>
       <Layout>
         <Sider
           trigger={null}
@@ -102,23 +106,37 @@ switch(path) {
         </Sider>
         <Layout>
           <Header style={{ background: '#fff', padding: 0 }}>
-            <Icon
-              className="trigger"
-              type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-              onClick={this.toggle}
-            />
-             <Button style={{float:'right',margin: 15}} onClick={()=>{this.props.history.push('/')}}>Sign out</Button>
+          <Row>
+     <Col span={2}>
+     <Icon
+       className="trigger"
+       type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+       onClick={this.toggle}
+     />
+     </Col>
+     <Col span={19}>
+     <Search
+         placeholder="input search text"
+         onSearch={value => console.log(value)}
+         enterButton
+       />
+     </Col>
+     <Col span={3}>
+   <Button style={{float:'right',margin: 15}} onClick={()=>{this.props.history.push('/')}}>Sign out</Button>
+     </Col>
+   </Row>
+
+
+
           </Header>
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-            {this.props.children ? (this.props.children) : ( <Carousel autoplay>
-    <div><h3>1</h3></div>
-    <div><h3>2</h3></div>
-    <div><h3>3</h3></div>
-    <div><h3>4</h3></div>
-  </Carousel>)}
+            {this.props.children ? (this.props.children) : (<OurProducts/>)}
           </Content>
         </Layout>
       </Layout>
+              <Footer/>
+      </div>
+
     );
   }
 }
