@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
-import { Layout, Menu, Breadcrumb, Icon, Carousel, Button,Input,Row, Col  } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon, Carousel, Button,Input,Row, Col ,Divider, List, Avatar  } from 'antd';
 import TableComponent from '../components/TableComponent';
+import Header from '../components/Header';
 import OurProducts from '../components/OurProducts';
 import Footer from '../components/Footer';
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 const Search = Input.Search;
 
+const data = [
+  {
+    title: 'Motorolo G4',
+  },
+  {
+    title: 'Motorolo G4',
+  },
+  {
+    title: 'Motorolo G4',
+  },
+  {
+    title: 'Motorolo G4',
+  },
+];
 
 
 class Dashboard extends React.Component {
@@ -67,7 +82,6 @@ switch(path) {
           trigger={null}
           collapsible
           collapsed={this.state.collapsed}
-          style={{height:'100vh'}}
         >
           <div className="logo" >
              <a href="/"><img src='images/logo.jpg' style={{width: '100%',
@@ -105,33 +119,51 @@ switch(path) {
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }}>
+      <Header toggle={this.toggle.bind(this)}/>
           <Row>
-     <Col span={2}>
-     <Icon
-       className="trigger"
-       type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-       onClick={this.toggle}
-     />
-     </Col>
-     <Col span={19}>
-     <Search
-         placeholder="input search text"
-         onSearch={value => console.log(value)}
-         enterButton
-       />
-     </Col>
-     <Col span={3}>
-   <Button style={{float:'right',margin: 15}} onClick={()=>{this.props.history.push('/')}}>Sign out</Button>
-     </Col>
-   </Row>
+            <Col span={18}>
+            <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+              {this.props.children ? (this.props.children) : (<OurProducts/>)}
+            </Content>
+            </Col>
+            <Col span={6}>
+              <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+              <div>
+                 <h5>History / Notifications</h5>
+                     <Divider />
+                     <List
+                      itemLayout="horizontal"
+                      dataSource={data}
+                      renderItem={item => (
+                        <List.Item>
+                          <List.Item.Meta
+                            avatar={<Avatar src="images/elec_1.jpg" />}
+                            title={<a href="https://ant.design">{item.title}</a>}
+                          />
+                        </List.Item>
+                      )}
+                    />
+                  </div>
+                  <div style={{marginTop:30}}>
+                    <h5>Buisiness / Notifications</h5>
+                        <Divider />
+                        <List
+                         itemLayout="horizontal"
+                         dataSource={data}
+                         renderItem={item => (
+                           <List.Item>
+                             <List.Item.Meta
+                               avatar={<Avatar src="images/elec_1.jpg" />}
+                               title={<a href="https://ant.design">{item.title}</a>}
+                             />
+                           </List.Item>
+                         )}
+                       />
+                  </div>
+              </Content>
+            </Col>
+          </Row>
 
-
-
-          </Header>
-          <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-            {this.props.children ? (this.props.children) : (<OurProducts/>)}
-          </Content>
         </Layout>
       </Layout>
               <Footer/>

@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
-import { Modal, Button,Input } from 'antd';
+import { Modal, Button,Input, Row,Menu, Dropdown, Col, Icon, Layout, Avatar } from 'antd';
 
 import Login from './Login';
 import Register from './Register';
 import Forget from './Forget';
 
 const Search = Input.Search;
+const { Header, Content, Sider } = Layout;
 
 
-
-class Header extends Component {
+class HeaderComponent extends Component {
 
   state = {
     ModalText: 'Content of the modal',
     visible: false,
     confirmLoading: false,
-    formType:'Login'
+    formType:'Login',
+    visibleDropDown: false
   }
 
   showModal = () => {
@@ -51,44 +52,67 @@ class Header extends Component {
       this.setState({formType})
   }
 
+  handleVisibleChange = (flag) => {
+    this.setState({ visibleDropDown: flag });
+  }
 
 
   render() {
    console.log(this.props.history.location.pathname);
    var pathname = this.props.history.location.pathname;
     const { visible, confirmLoading, ModalText , formType} = this.state;
+    console.log('pathname is '+pathname);
+    const menu = (
+  <Menu onClick={()=>{this.setState({visibleDropDown:false})}}>
+    <Menu.Item key="1">Sign out</Menu.Item>
+  </Menu>
+);
     return (
-      <nav className="colorlib-nav" role="navigation">
-        <div className="top-menu">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-2">
-                <div id="colorlib-logo">
-                          <a href="/"><img src='images/logo.jpg' style={{width: 100,}}/></a>
-                </div>
-              </div>
-              <div className="col-xs-10 text-right menu-1">
-                <ul>
-                  <li className="active" onClick={this.showModal} style={{color:'white'}}><a style={{background: '#007AB7',
-    padding: '10px 20px', color:'white !important'}}>Login</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Modal title={formType}
-            visible={visible}
-            onOk={this.handleOk}
-            confirmLoading={confirmLoading}
-            onCancel={this.handleCancel}
-            footer={null}
-          >
-           {formType=='Login'?  <Login changeForm={this.changeForm}/> : formType=='Register' ? <Register changeForm={this.changeForm}/> : <Forget changeForm={this.changeForm}/>}
+      <Header style={{ background: '#fff', padding: 0 }}>
+      <Row>
+ <Col span={2}>
+ <Icon
+   className="trigger"
+   type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
+   onClick={this.props.toggle}
+ />
+ </Col>
+ <Col span={19}>
+ <Search
+     placeholder="Find Seller / Products"
+     onSearch={value => console.log(value)}
+     enterButton
+   />
+ </Col>
+ <Col span={3} style={{textAlign:'center'}}>
+ {
+   (pathname=='/')?(
+     <Button style={{float:'right',margin: 15}} onClick={this.showModal.bind(this)}>Login</Button>
+   ):(
+     <Dropdown overlay={menu}
+           onVisibleChange={this.handleVisibleChange.bind(this)}
+           visible={this.state.visibleDropDown}
+         >
+         <Avatar size="large" icon="user" />
+     </Dropdown>
+   )
+ }
 
-          </Modal>
-      </nav>
+ </Col>
+</Row>
+<Modal title={formType}
+    visible={visible}
+    onOk={this.handleOk}
+    confirmLoading={confirmLoading}
+    onCancel={this.handleCancel}
+    footer={null}
+  >
+   {formType=='Login'?  <Login changeForm={this.changeForm}/> : formType=='Register' ? <Register changeForm={this.changeForm}/> : <Forget changeForm={this.changeForm}/>}
+
+  </Modal>
+      </Header>
     );
   }
 }
 
-export default withRouter(Header);
+export default withRouter(HeaderComponent);

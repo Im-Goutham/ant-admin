@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
-
+import {Input ,Row, Col } from 'antd';
+const Search = Input.Search;
 
 
 class OurProducts extends Component {
@@ -23,17 +24,28 @@ class OurProducts extends Component {
     return (
       <div>
       <div className="colorlib-shop">
-        <div className="container">
+        <div>
           <div className="row">
-            <div className="col-md-6 col-md-offset-3 text-center colorlib-heading">
-              <h2><span>Our Products</span></h2>
-              <p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <div className="text-center" style={{marginBottom:50}}>
+            <Row>
+              <Col span={8}>
+                <h2><span>Products</span></h2>
+              </Col>
+              <Col span={16}>
+              <Search
+                  placeholder="Search within results"
+                  onSearch={value => console.log(value)}
+                  enterButton
+                />
+              </Col>
+            </Row>
+
             </div>
           </div>
           <div className="row">
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_1.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_1.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="sale">Sale</span></p>
                   <div className="cart">
                     <p>
@@ -52,7 +64,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_2.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_2.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
@@ -71,7 +83,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_3.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_3.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
@@ -90,7 +102,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_4.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_4.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
@@ -109,7 +121,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_1.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_1.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
@@ -128,7 +140,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_2.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_2.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
@@ -147,7 +159,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_3.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_3.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
@@ -166,7 +178,7 @@ class OurProducts extends Component {
             </div>
             <div className="col-md-3 text-center">
               <div className="product-entry">
-                <div className="product-img" style={{backgroundImage: 'url(images/elec_4.jpg)'}}>
+                <div className="product-img" style={{backgroundImage: 'url(images/elec_4.jpg)'}}  onClick={()=>{this.props.history.push('productDetail')}}>
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>

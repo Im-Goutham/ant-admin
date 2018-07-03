@@ -10,6 +10,7 @@ import SaleProducts from './pages/SaleProducts';
 import SaleOrders from './pages/SaleOrders';
 import MyInventory from './pages/MyInventory';
 import PurchaseProducts from './pages/PurchaseProducts';
+import ProductDetail from './pages/ProductDetail'
 
 import NoMatch from './pages/NoMatch';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
@@ -29,7 +30,7 @@ class App extends Component {
       <PersistGate loading={null} persistor={persistor}>
       <Router>
         <div>
-          <Route exact path="/" component={Home}/>
+          <Route exact path="/" component={Dashboard}/>
           <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
           <Route path="/dashboard" component={Dashboard}/>
@@ -39,6 +40,7 @@ class App extends Component {
           <Route path="/saleOrders" component={SaleOrders}/>
           <Route path="/myInventory" component={MyInventory}/>
           <Route path="/purchaseProducts" component={PurchaseProducts}/>
+          <Route path="/productDetail" component={ProductDetail}/>
         {/* <Route path="*" component={NoMatch}/> */}
         </div>
       </Router>
