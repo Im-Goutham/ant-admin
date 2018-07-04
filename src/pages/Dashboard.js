@@ -75,6 +75,8 @@ switch(path) {
    }
 }
 
+   var pathname = this.props.history.location.pathname;
+
     return (
       <div>
       <Layout>
@@ -84,7 +86,7 @@ switch(path) {
           collapsed={this.state.collapsed}
         >
           <div className="logo" >
-             <a href="/"><img src='images/logo.jpg' style={{width: '100%',
+             <a href="/"><img src='images/eol-transparent.png' style={{width: '100%',
     height: '100%'}}/></a>
           </div>
           <Menu theme="dark" defaultSelectedKeys={[menuKey]} mode="inline">
@@ -121,12 +123,12 @@ switch(path) {
         <Layout>
       <Header toggle={this.toggle.bind(this)}/>
           <Row>
-            <Col span={18}>
+            <Col span={pathname=='/dashboard' ? 18 : 24}>
             <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
               {this.props.children ? (this.props.children) : (<OurProducts/>)}
             </Content>
             </Col>
-            <Col span={6}>
+            <Col span={pathname=='/dashboard' ? 6 : 0}>
               <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
               <div>
                  <h5>History / Notifications</h5>

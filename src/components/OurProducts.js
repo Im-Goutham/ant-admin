@@ -49,16 +49,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="sale">Sale</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$199.00</span> <span className="sale">$300.00</span> </p>
+                  <h3><a>Motorolo G4</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -68,16 +91,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a ><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>One Plus 3T</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -87,16 +133,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>iPhone X(64GB)</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -106,16 +175,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>Motorolo G4</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -125,16 +217,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>One Plus 4T</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -144,16 +259,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>Samsung G</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -163,16 +301,39 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>Moto G4</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
@@ -182,22 +343,46 @@ class OurProducts extends Component {
                   <p className="tag"><span className="new">New</span></p>
                   <div className="cart">
                     <p>
-                      <span className="addtocart"><a href="cart.html"><i className="icon-shopping-cart" /></a></span>
-                      <span><a href="product-detail.html"><i className="icon-eye" /></a></span>
-                      <span><a href="#"><i className="icon-heart3" /></a></span>
-                      <span><a href="add-to-wishlist.html"><i className="icon-bar-chart" /></a></span>
+                      <span className="addtocart"><a><i className="icon-shopping-cart" /></a></span>
+                      <span><a><i className="icon-eye" /></a></span>
+                      <span><a><i className="icon-heart3" /></a></span>
+                      <span><a><i className="icon-bar-chart" /></a></span>
                     </p>
                   </div>
                 </div>
                 <div className="desc">
-                  <h3><a href="shop.html">Floral Dress</a></h3>
-                  <p className="price"><span>$300.00</span></p>
+                  <h3><a>Vivo V7</a></h3>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Sales</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Purchases</h5>
+                     </Col>
+                     <Col span={12}>
+                       <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
+                  <Row>
+                     <Col span={12}>
+                         <h5>Cancellations</h5>
+                     </Col>
+                     <Col span={12}>
+                         <span className="sale" style={{color:'#007AB7'}}>10</span>
+                     </Col>
+                  </Row>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       </div>
     );
   }

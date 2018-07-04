@@ -64,7 +64,9 @@ class HeaderComponent extends Component {
     console.log('pathname is '+pathname);
     const menu = (
   <Menu onClick={()=>{this.setState({visibleDropDown:false})}}>
-    <Menu.Item key="1">Sign out</Menu.Item>
+     <Menu.Item key="1">Profile</Menu.Item>
+     <Menu.Item key="2">My Product</Menu.Item>
+     <Menu.Item key="3">Sign out</Menu.Item>
   </Menu>
 );
     return (
